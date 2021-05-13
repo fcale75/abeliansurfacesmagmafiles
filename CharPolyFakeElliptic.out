@@ -1,0 +1,771 @@
+Magma V2.21-11    Wed Jan 10 2018 15:43:29 on mathlab27 [Seed = 809296646]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+currently working over the field of order
+11
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <11*$.1^2 + 2*$.1 + 1, 2>
+]
+[
+    <11*$.1^2 - 5*$.1 + 1, 2>
+]
+currently working over the field of order
+169
+since the finite field is a square, the polys below should be the same
+[
+    <169*$.1^2 - 20*$.1 + 1, 2>
+]
+[
+    <169*$.1^2 - 20*$.1 + 1, 2>
+]
+currently working over the field of order
+289
+since the finite field is a square, the polys below should be the same
+[
+    <289*$.1^2 - 13*$.1 + 1, 2>
+]
+[
+    <289*$.1^2 - 13*$.1 + 1, 2>
+]
+currently working over the field of order
+361
+since the finite field is a square, the polys below should be the same
+[
+    <361*$.1^2 + 25*$.1 + 1, 2>
+]
+[
+    <361*$.1^2 + 25*$.1 + 1, 2>
+]
+currently working over the field of order
+529
+since the finite field is a square, the polys below should be the same
+[
+    <529*$.1^2 + 21*$.1 + 1, 2>
+]
+[
+    <529*$.1^2 + 21*$.1 + 1, 2>
+]
+currently working over the field of order
+29
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <29*$.1^2 + 4*$.1 + 1, 2>
+]
+[
+    <29*$.1^2 + 8*$.1 + 1, 2>
+]
+currently working over the field of order
+31
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <31*$.1^2 - $.1 + 1, 2>
+]
+[
+    <31*$.1^2 + 6*$.1 + 1, 2>
+]
+currently working over the field of order
+53
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <53*$.1^2 - 4*$.1 + 1, 2>
+]
+[
+    <53*$.1^2 + 11*$.1 + 1, 2>
+]
+currently working over the field of order
+59
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <59*$.1^2 - 7*$.1 + 1, 2>
+]
+[
+    <59*$.1^2 + 11*$.1 + 1, 2>
+]
+currently working over the field of order
+79
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <79*$.1^2 - 3*$.1 + 1, 2>
+]
+[
+    <79*$.1^2 + 15*$.1 + 1, 2>
+]
+currently working over the field of order
+83
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <83*$.1^2 + 7*$.1 + 1, 2>
+]
+[
+    <83*$.1^2 + 17*$.1 + 1, 2>
+]
+currently working over the field of order
+97
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <97*$.1^2 + 3*$.1 + 1, 2>
+]
+[
+    <97*$.1^2 - $.1 + 1, 2>
+]
+currently working over the field of order
+101
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <101*$.1^2 + 11*$.1 + 1, 2>
+]
+[
+    <101*$.1^2 - 4*$.1 + 1, 2>
+]
+currently working over the field of order
+103
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <103*$.1^2 + $.1 + 1, 2>
+]
+[
+    <103*$.1^2 - 11*$.1 + 1, 2>
+]
+currently working over the field of order
+107
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <107*$.1^2 + 17*$.1 + 1, 2>
+]
+[
+    <107*$.1^2 + 8*$.1 + 1, 2>
+]
+currently working over the field of order
+127
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <127*$.1^2 - 9*$.1 + 1, 2>
+]
+[
+    <127*$.1^2 + 11*$.1 + 1, 2>
+]
+currently working over the field of order
+131
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <131*$.1^2 - 17*$.1 + 1, 2>
+]
+[
+    <131*$.1^2 + 10*$.1 + 1, 2>
+]
+currently working over the field of order
+149
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <149*$.1^2 + 17*$.1 + 1, 2>
+]
+[
+    <149*$.1^2 + 2*$.1 + 1, 2>
+]
+currently working over the field of order
+151
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <151*$.1^2 - 18*$.1 + 1, 2>
+]
+[
+    <151*$.1^2 - 5*$.1 + 1, 2>
+]
+currently working over the field of order
+173
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <173*$.1^2 + 19*$.1 + 1, 2>
+]
+[
+    <173*$.1^2 + 4*$.1 + 1, 2>
+]
+currently working over the field of order
+179
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <179*$.1^2 + 16*$.1 + 1, 2>
+]
+[
+    <179*$.1^2 - 7*$.1 + 1, 2>
+]
+currently working over the field of order
+193
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <193*$.1^2 + 1, 2>
+]
+[
+    <193*$.1^2 + 9*$.1 + 1, 2>
+]
+currently working over the field of order
+197
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <197*$.1^2 + 17*$.1 + 1, 2>
+]
+[
+    <197*$.1^2 + 11*$.1 + 1, 2>
+]
+currently working over the field of order
+199
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <199*$.1^2 - 21*$.1 + 1, 2>
+]
+[
+    <199*$.1^2 + 2*$.1 + 1, 2>
+]
+currently working over the field of order
+227
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <227*$.1^2 - $.1 + 1, 2>
+]
+[
+    <227*$.1^2 + 5*$.1 + 1, 2>
+]
+currently working over the field of order
+241
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <241*$.1^2 - 5*$.1 + 1, 2>
+]
+[
+    <241*$.1^2 + 15*$.1 + 1, 2>
+]
+currently working over the field of order
+251
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <251*$.1^2 + 8*$.1 + 1, 2>
+]
+[
+    <251*$.1^2 - 14*$.1 + 1, 2>
+]
+currently working over the field of order
+269
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <269*$.1^2 - 7*$.1 + 1, 2>
+]
+[
+    <269*$.1^2 + 17*$.1 + 1, 2>
+]
+currently working over the field of order
+271
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <271*$.1^2 + 18*$.1 + 1, 2>
+]
+[
+    <271*$.1^2 + 23*$.1 + 1, 2>
+]
+currently working over the field of order
+293
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <293*$.1^2 - 14*$.1 + 1, 2>
+]
+[
+    <293*$.1^2 + 16*$.1 + 1, 2>
+]
+currently working over the field of order
+313
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <313*$.1^2 - 6*$.1 + 1, 2>
+]
+[
+    <313*$.1^2 - 15*$.1 + 1, 2>
+]
+currently working over the field of order
+317
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <317*$.1^2 + 17*$.1 + 1, 2>
+]
+[
+    <317*$.1^2 - 32*$.1 + 1, 2>
+]
+currently working over the field of order
+337
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <337*$.1^2 + 8*$.1 + 1, 2>
+]
+[
+    <337*$.1^2 - 20*$.1 + 1, 2>
+]
+currently working over the field of order
+347
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <347*$.1^2 - 17*$.1 + 1, 2>
+]
+[
+    <347*$.1^2 + 16*$.1 + 1, 2>
+]
+currently working over the field of order
+367
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <367*$.1^2 - 14*$.1 + 1, 2>
+]
+[
+    <367*$.1^2 - 21*$.1 + 1, 2>
+]
+currently working over the field of order
+389
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <389*$.1^2 - 17*$.1 + 1, 2>
+]
+[
+    <389*$.1^2 - 20*$.1 + 1, 2>
+]
+currently working over the field of order
+409
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <409*$.1^2 - 12*$.1 + 1, 2>
+]
+[
+    <409*$.1^2 + 19*$.1 + 1, 2>
+]
+currently working over the field of order
+419
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <419*$.1^2 + 32*$.1 + 1, 2>
+]
+[
+    <419*$.1^2 - 26*$.1 + 1, 2>
+]
+currently working over the field of order
+433
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <433*$.1^2 + $.1 + 1, 2>
+]
+[
+    <433*$.1^2 - 35*$.1 + 1, 2>
+]
+currently working over the field of order
+439
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <439*$.1^2 + 15*$.1 + 1, 2>
+]
+[
+    <439*$.1^2 + 12*$.1 + 1, 2>
+]
+currently working over the field of order
+443
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <443*$.1^2 - 17*$.1 + 1, 2>
+]
+[
+    <443*$.1^2 - $.1 + 1, 2>
+]
+currently working over the field of order
+457
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <457*$.1^2 + 27*$.1 + 1, 2>
+]
+[
+    <457*$.1^2 + 32*$.1 + 1, 2>
+]
+currently working over the field of order
+461
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <461*$.1^2 + 17*$.1 + 1, 2>
+]
+[
+    <461*$.1^2 - 5*$.1 + 1, 2>
+]
+currently working over the field of order
+463
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <463*$.1^2 - $.1 + 1, 2>
+]
+[
+    <463*$.1^2 - 33*$.1 + 1, 2>
+]
+currently working over the field of order
+467
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <467*$.1^2 + 26*$.1 + 1, 2>
+]
+[
+    <467*$.1^2 + 43*$.1 + 1, 2>
+]
+currently working over the field of order
+487
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <487*$.1^2 - 7*$.1 + 1, 2>
+]
+[
+    <487*$.1^2 + 27*$.1 + 1, 2>
+]
+currently working over the field of order
+491
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <491*$.1^2 + 31*$.1 + 1, 2>
+]
+[
+    <491*$.1^2 + 19*$.1 + 1, 2>
+]
+currently working over the field of order
+509
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <509*$.1^2 + 19*$.1 + 1, 2>
+]
+[
+    <509*$.1^2 + 32*$.1 + 1, 2>
+]
+currently working over the field of order
+557
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <557*$.1^2 - 32*$.1 + 1, 2>
+]
+[
+    <557*$.1^2 + 7*$.1 + 1, 2>
+]
+currently working over the field of order
+563
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <563*$.1^2 - 8*$.1 + 1, 2>
+]
+[
+    <563*$.1^2 + $.1 + 1, 2>
+]
+currently working over the field of order
+577
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <577*$.1^2 - 41*$.1 + 1, 2>
+]
+[
+    <577*$.1^2 + 17*$.1 + 1, 2>
+]
+currently working over the field of order
+587
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <587*$.1^2 + 29*$.1 + 1, 2>
+]
+[
+    <587*$.1^2 + 37*$.1 + 1, 2>
+]
+currently working over the field of order
+601
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <601*$.1^2 + 33*$.1 + 1, 2>
+]
+[
+    <601*$.1^2 + 31*$.1 + 1, 2>
+]
+currently working over the field of order
+607
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <607*$.1^2 - 33*$.1 + 1, 2>
+]
+[
+    <607*$.1^2 - 43*$.1 + 1, 2>
+]
+currently working over the field of order
+631
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <631*$.1^2 - 21*$.1 + 1, 2>
+]
+[
+    <631*$.1^2 + 5*$.1 + 1, 2>
+]
+currently working over the field of order
+653
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <653*$.1^2 + 34*$.1 + 1, 2>
+]
+[
+    <653*$.1^2 + 23*$.1 + 1, 2>
+]
+currently working over the field of order
+659
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <659*$.1^2 - 5*$.1 + 1, 2>
+]
+[
+    <659*$.1^2 + 43*$.1 + 1, 2>
+]
+currently working over the field of order
+673
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <673*$.1^2 + 47*$.1 + 1, 2>
+]
+[
+    <673*$.1^2 - 21*$.1 + 1, 2>
+]
+currently working over the field of order
+677
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <677*$.1^2 - 35*$.1 + 1, 2>
+]
+[
+    <677*$.1^2 - 19*$.1 + 1, 2>
+]
+currently working over the field of order
+683
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <683*$.1^2 - 49*$.1 + 1, 2>
+]
+[
+    <683*$.1^2 + 29*$.1 + 1, 2>
+]
+currently working over the field of order
+701
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <701*$.1^2 - 13*$.1 + 1, 2>
+]
+[
+    <701*$.1^2 - 29*$.1 + 1, 2>
+]
+currently working over the field of order
+727
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <727*$.1^2 + 3*$.1 + 1, 2>
+]
+[
+    <727*$.1^2 + 47*$.1 + 1, 2>
+]
+currently working over the field of order
+751
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <751*$.1^2 + 43*$.1 + 1, 2>
+]
+[
+    <751*$.1^2 - 54*$.1 + 1, 2>
+]
+currently working over the field of order
+769
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <769*$.1^2 - 9*$.1 + 1, 2>
+]
+[
+    <769*$.1^2 + 37*$.1 + 1, 2>
+]
+currently working over the field of order
+773
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <773*$.1^2 + $.1 + 1, 2>
+]
+[
+    <773*$.1^2 + 47*$.1 + 1, 2>
+]
+currently working over the field of order
+797
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <797*$.1^2 + 17*$.1 + 1, 2>
+]
+[
+    <797*$.1^2 + $.1 + 1, 2>
+]
+currently working over the field of order
+821
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <821*$.1^2 + 31*$.1 + 1, 2>
+]
+[
+    <821*$.1^2 + 13*$.1 + 1, 2>
+]
+currently working over the field of order
+823
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <823*$.1^2 + 9*$.1 + 1, 2>
+]
+[
+    <823*$.1^2 - 6*$.1 + 1, 2>
+]
+currently working over the field of order
+827
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <827*$.1^2 - 8*$.1 + 1, 2>
+]
+[
+    <827*$.1^2 + 40*$.1 + 1, 2>
+]
+currently working over the field of order
+919
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <919*$.1^2 - 46*$.1 + 1, 2>
+]
+[
+    <919*$.1^2 - 51*$.1 + 1, 2>
+]
+currently working over the field of order
+937
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <937*$.1^2 - 19*$.1 + 1, 2>
+]
+[
+    <937*$.1^2 + 21*$.1 + 1, 2>
+]
+currently working over the field of order
+941
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <941*$.1^2 - 8*$.1 + 1, 2>
+]
+[
+    <941*$.1^2 - 41*$.1 + 1, 2>
+]
+currently working over the field of order
+947
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <947*$.1^2 - 47*$.1 + 1, 2>
+]
+[
+    <947*$.1^2 + 8*$.1 + 1, 2>
+]
+currently working over the field of order
+967
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <967*$.1^2 - $.1 + 1, 2>
+]
+[
+    <967*$.1^2 + 27*$.1 + 1, 2>
+]
+currently working over the field of order
+971
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <971*$.1^2 + 38*$.1 + 1, 2>
+]
+[
+    <971*$.1^2 - 35*$.1 + 1, 2>
+]
+currently working over the field of order
+991
+since the finite field is prime, the polys below should generically not be 
+twists
+[
+    <991*$.1^2 + 18*$.1 + 1, 2>
+]
+[
+    <991*$.1^2 - 5*$.1 + 1, 2>
+]
+
+Total time: 20.139 seconds, Total memory usage: 64.12MB

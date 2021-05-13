@@ -1,0 +1,21 @@
+Magma V2.23-9     Thu May 13 2021 08:48:43 on hegel    [Seed = 2506677172]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+the cohomology group H^1(Sp_4(F_3),Ad^0) has dimension
+0
+the cohomology group H^1(Sp_4(F_5),Ad^0) has dimension
+0
+the cohomology group H^1(Sp_4(F_7),Ad^0) has dimension
+0
+
+Total time: 1.379 seconds, Total memory usage: 32.09MB

@@ -1,0 +1,326 @@
+/* An intial remark. If V is a representation of G over F, 
+then V is absolutely irreducible iff H^0(G,V tensor V^*) = 1. 
+This follows from flat base change. */
+
+/* The Group GSp_4(F_3) */
+
+SetSeed(1);
+GSp:=CSp(4,3);
+SubGSp:=Subgroups(GSp);
+
+
+/* The Group Sp_4(F_3) */
+Sp:=SubGSp[#SubGSp - 1]`subgroup;
+SubSp:=Subgroups(Sp);
+
+/* the element (-1,-1,-1,-1) */
+c:=Center(GSp).1;
+
+Z<x>:=PolynomialRing(FiniteField(3));
+
+/* The following counts the number of elements in a group Gamma 
+which are tidy. The only allowable possibity is that v(g) = -1. 
+If 1 is an eigenvalue then so is -1, and g is not tidy. If -1
+eigencalue then so is 1, so need only rule out 1 from {1,-1}. Suppose 
+the eigenvalues are of the form (a,-1/a,b,-1/b). Suppose that a ratio = - 1. 
+The ratio of a/(-1/a) = -a^2 can't be -1 unless a=+-1. 
+Hence we must have WLOG b = -a, and eigenvalues = (a,-1/a,-a,1/a), 
+and the characteristic polynomial of g = char poly g*c for c = (-1,-1,-1,-1) */
+
+function tidycount(Gamma);
+counter:=0;
+G:=Gamma meet Sp;
+for g in Gamma do
+	if g notin G then
+		P:=Z!CharacteristicPolynomial(g);
+		Q:=Z!CharacteristicPolynomial(g * c);
+		if Evaluate(P,1) ne 0 then
+			if P ne Q then
+				counter:=counter+1;
+			end if;
+		end if;
+	end if;
+end for;
+return counter;
+end function;
+
+/* the following determines: 1) the labels of subgroups H in GSp_4(F_3) such that |H|=|Gammma| and |nu(H)| = |nu(G)|
+			     2) the labels of subgroups H in Sp_4(F_3) such that |H| = |G| = |Gamma cap Sp_4| */
+
+
+function issplit(G,H);
+ordertwo:=0;
+for g in G do
+	if g notin H then
+		if Order(g) eq 2 then
+			ordertwo:=1 + ordertwo - ordertwo^2;
+		end if;
+	end if;
+end for;
+return ordertwo;
+end function;
+
+
+function inertiasplitting(T,S);
+splitters:=0;
+splitters4:=0;
+for g in T do
+	if Order(g) eq 2 then
+		if g notin S then
+			splitters:=splitters + 1;
+		end if;
+	end if;
+        if Order(g) eq 4 then
+                if g notin S then
+                        splitters4:=splitters4 + 1;
+                end if;
+        end if;
+
+end for;
+return [splitters, splitters4];
+end function;
+
+function numberoffactors(V);
+/*  if a module of dimension N over Fp becomes reducible over an extension, that extension must have degree dividing N */
+        VV:=ChangeRing(V,FiniteField(3^4));
+        factors:=#CompositionFactors(VV);
+return factors;
+end function;
+
+
+function isinduced(T);
+count:=0;
+countweak:=0;
+countcyclo:=0;
+split:=0;
+V:=GModule(T);
+VV:=Dual(V);
+ZT:=NormalSubgroups(T);
+for m in [1..#ZT] do
+        S:=ZT[m]`subgroup;
+        if Index(T,S) eq 2 then
+                VS:=Restriction(V,S);
+                VVS:=Restriction(VV,S);
+		 /* CompS:=CohomologicalDimension(CohomologyModule(S,TensorProduct(VS,VVS)),0); */
+                CompS:=numberoffactors(VS);
+                if CompS ge 2 then
+                        if Index(S,S meet Sp) eq 1 then;
+                                countcyclo:=countcyclo + 1;
+                        end if;
+                        count:=count+1;
+                        countweak:=countweak + #CompositionFactors(VS)-1;
+			split:=split + issplit(T,S);
+                end if;
+        end if;
+end for;
+return count, countweak, split, countcyclo;
+end function;
+
+
+
+procedure inducedverbal(T);
+count:=0;
+countweak:=0;
+countcyclo:=0;
+split:=0;
+V:=GModule(T);
+VV:=Dual(V);
+ZT:=NormalSubgroups(T);
+for m in [1..#ZT] do
+        S:=ZT[m]`subgroup;
+        if Index(T,S) eq 2 then
+                VS:=Restriction(V,S);
+                VVS:=Restriction(VV,S);
+ /* CompS:=CohomologicalDimension(CohomologyModule(S,TensorProduct(VS,VVS)),0); */
+		CompS:=numberoffactors(VS);
+                if CompS ge 2 then
+                        if Index(S,S meet Sp) eq 1 then;
+                                countcyclo:=countcyclo + 1;
+                        end if;
+                        count:=count+1;
+                        countweak:=countweak + #CompositionFactors(VS)-1;
+                        split:=split + issplit(T,S);
+			if (#CompositionFactors(VS)-1) eq 1 then
+				CharacterTable(S);
+			end if;
+                end if;
+        end if;
+end for;
+[count, countweak, split, countcyclo];
+end procedure;
+
+
+
+
+
+
+
+function uptoconj(Gamma);
+initialGSp:=[];
+initialSp:=[];
+G:=Gamma meet Sp;
+for m in [1..#SubGSp] do
+	P:=SubGSp[m]`subgroup;
+	if Order(P) eq Order(Gamma) then
+		if Index(Gamma,G) eq Index(P,P meet Sp) then
+			initialGSp:=Append(initialGSp,m);
+		end if;
+	end if;
+end for;
+for m in [1..#SubSp] do
+        P:=SubSp[m]`subgroup;
+        if Order(P) eq Order(G) then
+                  initialSp:=Append(initialSp,m);
+        end if;
+end for;
+return initialGSp, initialSp;
+end function;
+
+
+
+/* The loop is over subgroups of GSp_4, but avoids the first 4 groups 
+(which have order 1,2,2,2) because, in cases 1 & 4, they have Gamma cap Sp_4 = 1,
+and this makes the cohomology functions barf. But groups of order 2 and 1 are not enormous. */
+
+
+/* This loops over subgroups of GSp_4, but I do the subgroups of Sp_4 then the subgroups of GSp_4 not in Sp_4 second */
+
+for k in [1..2] do
+print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+print("Now considering the subgroups of GSp_4(F_3) such that the image of the similitude character is");
+k;
+print("If number above equals 1, there won't be any tidy elements for stupid reasons");
+for n in [5..#SubGSp] do 
+
+	Gamma:=SubGSp[n]`subgroup;
+	G:= (Sp meet Gamma);
+
+/* Since all our similitude characters will be cyclotomic, 
+the restriction to Q(zeta_3) will always lie in Sp_3(F_4).  
+Hence I am only looking for enormous subgroups of Sp_3(F_3).
+The looping over subgroups of GSp_3(F_3) is to detect tidy elements. 
+When the similitude character is cyclotomic,
+one has that the 10-dimensional representation Ad of G in Sp_4(F_3) 
+coincides with the representation Sym^2(V) of G. */
+
+        V:=GModule(G);
+        VV:=Dual(V);
+
+/* Comp Checks that the representation of G is absolutely irreducible. 
+Edited to actually give the correct computation */
+
+	Comp:=numberoffactors(V);
+
+/* Coho Checks that H^1(G,Ad^0(1)) = H^1(G,Sym^2(V)) = 0, for enormousness */
+
+	Ad:=SymmetricPower(V,2);
+	Coho:=CohomologicalDimension(CohomologyModule(G,Ad),1);
+
+/* AbsG computes the abelianization of G in Sp_4(F_3) just for fun. */
+
+	AbG:=Order(quo<G|CommutatorSubgroup(G)>);
+
+/* Various calculations are done with the "irreducible" constituents of Ad^0. 
+The program actually works with consitutents over F_3, which, a priori, may not 
+be absolutely irreducible. The following checks whether they are indeed absolutely 
+irreducible; if not, then further checks are requred. In practice, this never 
+happens for the examples in question */
+
+	abscheck:=0;
+	for W in CompositionFactors(Ad) do
+/*        	WW:=Dual(W);
+		abscheck:=CohomologicalDimension(CohomologyModule(G,TensorProduct(W,WW)),0) - 1 + abscheck;	*/
+		abscheck:=abscheck + numberoffactors(W) - 1;
+	end for;
+
+/* The following loops over elements of G for elements with 
+distinct eigenvalues. It does this in the stupid manner
+of checking that the discriminant of the char poly is non-zero. Given such
+an element, it then takes each W in Ad(V) and checks 
+whether it has an eigenvalue 1. It does this
+by letting H = <g> and then computing H^0(H,W). 
+It only bothers doing this calculation if the 
+cohomological tests have already been verified. 
+It also stops once it has found such an element "counter"  */
+	if Index(Gamma,G) eq k then
+		if Comp eq 1 then
+			if Coho eq 0 then	
+				total:=0;
+                                for W in CompositionFactors(Ad) do
+				count:=0;
+				counter:=0;
+                                        for g in (G meet Sp) do
+                                                if counter eq 0 then
+                                                        P:=Z!CharacteristicPolynomial(g);
+                                                        if Discriminant(P) ne 0 then
+
+/* ok, it's found an element g with distinct eigenvalues,
+now restricting the consitutents of Ad^0 to the subgoup H = <g>.
+Then computing H^0(H,W) to make sure it is non-zero.
+a good element will have "count" = 0 */
+
+                                                                H:=sub<G|g>;
+                                                                WW:=Dual(W);
+                                                                RH:=Restriction(W,H);
+                                                                RHD:=CohomologicalDimension(CohomologyModule(H,RH),0);
+                                                                if RHD ge 1 then
+                                                                        count:=count + 1;
+                                                                end if;
+                                                        end if;
+                                                        if count eq 1 then
+
+/* If count = 1, it's good. counter ensures that it
+stops after finding one element guaranteeing bigness */
+
+                                                                counter:=counter + 1;
+                                                                total:=total + 1;
+
+/* total should eventually reach #CompositionFactors(Ad) for weakly adequate */
+
+                                                        end if;
+                                                end if;
+                                        end for;
+                                end for;
+				if total eq #CompositionFactors(Ad) then
+					print("************************************");
+					print("The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), Index(Sp_4(F_3):G)]");
+                                        [Order(Gamma),Order(G),Index(GSp,Gamma),Index(Sp,G)];
+					if Order(G) le 1000 then
+						print("Magma might recognize the group Gamma and G to be");
+						IdentifyGroup(Gamma);
+						IdentifyGroup(G);
+					end if;
+					print("Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is");
+					n;
+					print("Knowing the order of Gamma and the image of the similitude character, the first line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this property. The second line lists the possible subgroups of Sp_4(F_3) up to conjugacy with the same order as G");
+					uptoconj(Gamma);
+					print("The composition factors of Adjoint over F_3 have dimension");
+					CompositionFactors(Ad);
+					print("and they are aboslutely irreducible if the following # is zero");
+					abscheck;
+					print("The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap Z(Sp_4(F_3))]");
+					[AbG,Order(Center(G)),Order(G meet Center(Sp))];	
+					print("The number of tidy elements in Gamma is");
+					tidycount(Gamma);
+					print("# of elements of G not in H of orders 2 and 4");
+					inertiasplitting(Gamma,G);
+					count, countweak, split, countcyclo:=isinduced(Gamma);
+					if count eq 0 then
+						print("Representation of Gamma is not induced");
+					end if;
+					if count ge 1 then
+						print("Representation of Gamma *IS* induced from A index two subgroups, B of which decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)");
+						[count, countweak, split, countcyclo];
+					end if;
+				end if;
+			end if;
+		end if;
+	end if;
+end for;
+end for;
+
+print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+

@@ -1,0 +1,18 @@
+G3:=Sp(4,3);
+V3:=GModule(G3);
+Ad3:=SymmetricPower(V3,2);
+print("the cohomology group H^1(Sp_4(F_3),Ad^0) has dimension");
+CohomologicalDimension(CohomologyModule(G3,Ad3),1);
+
+G5:=Sp(4,5);
+V5:=GModule(G5);
+Ad5:=SymmetricPower(V5,2);
+print("the cohomology group H^1(Sp_4(F_5),Ad^0) has dimension");
+CohomologicalDimension(CohomologyModule(G5,Ad5),1);
+
+
+G7:=Sp(4,7);
+V7:=GModule(G7);
+Ad7:=SymmetricPower(V7,2);
+print("the cohomology group H^1(Sp_4(F_7),Ad^0) has dimension");
+CohomologicalDimension(CohomologyModule(G7,Ad7),1);

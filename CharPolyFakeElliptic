@@ -1,0 +1,28 @@
+Primes:=[ p : p in [1..1000] | IsPrime(p) ];
+for p in Primes do;
+	if GCD(p,2*3*5*7*73*223) eq 1 then
+		if JacobiSymbol(-6,p) eq 1 then m:=1; end if;
+		if JacobiSymbol(-6,p) eq -1 then m:=2; end if;
+		if p^m le 1000 then
+			print("currently working over the field of order");
+			p^m;
+			if m eq 2 then
+				print("since the finite field is a square, the polys below should be the same");
+				end if;
+			if m eq 1 then
+				print("since the finite field is prime, the polys below should generically not be twists");
+				end if;
+			F:=FiniteField(p^m);
+			P<x>:=PolynomialRing(F);
+			for e in F do;
+			if (e^2+6) eq 0 then;
+				F:=(-6/7*e + 24/7)*x^6 + (-3744/49*e + 5520/49)*x^5 + (-101232/49*e + 769344/343)*x^4 + (4592640/2401*e + 5959424/2401)*x^3 + (-218231424/16807*e + 193221120/16807)*x^2 + (-108546048/16807*e - 34016271360/117649)*x + (-23885306880/823543*e + 458109218816/823543);
+				X:=HyperellipticCurve(F);
+				Factorization(Numerator(ZetaFunction(X)));
+				end if;
+			end for;
+			end if;
+		end if;
+end for;
+
+
