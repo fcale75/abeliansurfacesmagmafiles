@@ -1,4 +1,4 @@
-Magma V2.21-11    Sat Apr 14 2018 17:59:42 on egon     [Seed = 3696492822]
+Magma V2.23-9     Fri May 21 2021 21:14:15 on hegel    [Seed = 1536381877]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -12,33 +12,40 @@ Magma V2.21-11    Sat Apr 14 2018 17:59:42 on egon     [Seed = 3696492822]
 
 Type ? for help.  Type <Ctrl>-D to quit.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A general remark about notation: Gamma is a subgroup of GSp_4(F_3), and G is the
+intersection of Gamma with Sp_4(F_3)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Now considering the subgroups of GSp_4(F_3) such that the image of the 
 similitude character is
 1
-If number above equals 1, there won't be any tidy elements for stupid reasons
+If number above equals 1, there won't be any tidy elements for stupid reasons. 
+The groups printed
+below are the ones such that G = Gamma cap Sp_4(F_3) are enormous.
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+207
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 40, 40, 2592, 1296 ]
 Magma might recognize the group Gamma and G to be
 <40, 3>
 <40, 3>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-207
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 207 ]
 [ 83 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 4 over GF(3),
     GModule of dimension 2 over GF(3),
+    GModule of dimension 4 over GF(3),
     GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 1
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -47,23 +54,27 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 0, 0, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+383
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 160, 160, 648, 324 ]
 Magma might recognize the group Gamma and G to be
 <160, 199>
 <160, 199>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-383
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 383 ]
 [ 133 ]
 The composition factors of Adjoint over F_3 have dimension
@@ -71,7 +82,7 @@ The composition factors of Adjoint over F_3 have dimension
     GModule of dimension 5 over GF(3),
     GModule of dimension 5 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -82,26 +93,27 @@ The number of tidy elements in Gamma is
 [ 0, 0 ]
 Representation of Gamma is not induced
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+404
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 240, 240, 432, 216 ]
 Magma might recognize the group Gamma and G to be
 <240, 90>
 <240, 90>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-404
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 404, 407 ]
 [ 140, 141 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 4 over GF(3),
-    GModule of dimension 6 over GF(3)
+    GModule of dimension 6 over GF(3),
+    GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -110,33 +122,37 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 0, 1, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+416
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 128, 128, 810, 405 ]
 Magma might recognize the group Gamma and G to be
 <128, 937>
 <128, 937>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-416
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 416 ]
 [ 143 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule of dimension 2 over GF(3),
     GModule of dimension 2 over GF(3),
-    GModule of dimension 2 over GF(3),
-    GModule of dimension 4 over GF(3)
+    GModule of dimension 4 over GF(3),
+    GModule of dimension 2 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -145,32 +161,36 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+431
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 192, 192, 540, 270 ]
 Magma might recognize the group Gamma and G to be
 <192, 989>
 <192, 989>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-431
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 422, 423, 424, 431 ]
 [ 144, 145, 146, 147 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 1 over GF(3),
     GModule of dimension 3 over GF(3),
-    GModule of dimension 6 over GF(3)
+    GModule of dimension 6 over GF(3),
+    GModule of dimension 1 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -179,23 +199,27 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 0, 1, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+437
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 320, 320, 324, 162 ]
 Magma might recognize the group Gamma and G to be
 <320, 1581>
 <320, 1581>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-437
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 437 ]
 [ 148 ]
 The composition factors of Adjoint over F_3 have dimension
@@ -203,7 +227,7 @@ The composition factors of Adjoint over F_3 have dimension
     GModule of dimension 5 over GF(3),
     GModule of dimension 5 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -214,26 +238,27 @@ The number of tidy elements in Gamma is
 [ 0, 0 ]
 Representation of Gamma is not induced
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+460
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 384, 384, 270, 135 ]
 Magma might recognize the group Gamma and G to be
 <384, 18130>
 <384, 18130>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-460
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 460, 462 ]
 [ 154, 155 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 4 over GF(3),
-    GModule of dimension 6 over GF(3)
+    GModule of dimension 6 over GF(3),
+    GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -242,31 +267,35 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+462
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 384, 384, 270, 135 ]
 Magma might recognize the group Gamma and G to be
 <384, 618>
 <384, 618>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-462
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 460, 462 ]
 [ 154, 155 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 6 over GF(3),
-    GModule of dimension 4 over GF(3)
+    GModule of dimension 4 over GF(3),
+    GModule of dimension 6 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -275,28 +304,32 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+484
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 1152, 1152, 90, 45 ]
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-484
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 484 ]
 [ 160 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 6 over GF(3),
-    GModule of dimension 4 over GF(3)
+    GModule of dimension 4 over GF(3),
+    GModule of dimension 6 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -305,27 +338,31 @@ The number of tidy elements in Gamma is
 0
 # of elements of G not in H of orders 2 and 4
 [ 0, 0 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 1 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+485
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 1920, 1920, 54, 27 ]
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-485
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 485 ]
 [ 161 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule Ad of dimension 10 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -336,22 +373,23 @@ The number of tidy elements in Gamma is
 [ 0, 0 ]
 Representation of Gamma is not induced
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+491
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 51840, 51840, 2, 1 ]
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-491
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 491 ]
 [ 162 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule Ad of dimension 10 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -366,29 +404,32 @@ Representation of Gamma is not induced
 Now considering the subgroups of GSp_4(F_3) such that the image of the 
 similitude character is
 2
-If number above equals 1, there won't be any tidy elements for stupid reasons
+If number above equals 1, there won't be any tidy elements for stupid reasons. 
+The groups printed
+below are the ones such that G = Gamma cap Sp_4(F_3) are enormous.
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+308
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 80, 40, 1296, 1296 ]
 Magma might recognize the group Gamma and G to be
 <80, 29>
 <40, 3>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-308
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 308 ]
 [ 83 ]
 The composition factors of Adjoint over F_3 have dimension
 [
+    GModule of dimension 2 over GF(3),
     GModule of dimension 4 over GF(3),
-    GModule of dimension 4 over GF(3),
-    GModule of dimension 2 over GF(3)
+    GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 1
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -397,23 +438,27 @@ The number of tidy elements in Gamma is
 8
 # of elements of G not in H of orders 2 and 4
 [ 10, 2 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 0, 0, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+453
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 480, 240, 216, 216 ]
 Magma might recognize the group Gamma and G to be
 <480, 948>
 <240, 90>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-453
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 452, 453 ]
 [ 140, 141 ]
 The composition factors of Adjoint over F_3 have dimension
@@ -421,7 +466,7 @@ The composition factors of Adjoint over F_3 have dimension
     GModule of dimension 6 over GF(3),
     GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -430,33 +475,37 @@ The number of tidy elements in Gamma is
 48
 # of elements of G not in H of orders 2 and 4
 [ 50, 2 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 0, 1, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+458
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 256, 128, 405, 405 ]
 Magma might recognize the group Gamma and G to be
 <256, 6671>
 <128, 937>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-458
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 458 ]
 [ 143 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule of dimension 2 over GF(3),
-    GModule of dimension 2 over GF(3),
     GModule of dimension 4 over GF(3),
+    GModule of dimension 2 over GF(3),
     GModule of dimension 2 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -465,32 +514,36 @@ The number of tidy elements in Gamma is
 8
 # of elements of G not in H of orders 2 and 4
 [ 24, 8 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+465
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 384, 192, 270, 270 ]
 Magma might recognize the group Gamma and G to be
 <384, 18045>
 <192, 989>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-465
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 459, 461, 463, 464, 465, 466 ]
 [ 144, 145, 146, 147 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule of dimension 1 over GF(3),
-    GModule of dimension 6 over GF(3),
-    GModule of dimension 3 over GF(3)
+    GModule of dimension 3 over GF(3),
+    GModule of dimension 6 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -499,23 +552,27 @@ The number of tidy elements in Gamma is
 48
 # of elements of G not in H of orders 2 and 4
 [ 48, 16 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 0, 1, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+468
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 640, 320, 162, 162 ]
 Magma might recognize the group Gamma and G to be
 <640, 21454>
 <320, 1581>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-468
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 468 ]
 [ 148 ]
 The composition factors of Adjoint over F_3 have dimension
@@ -523,7 +580,7 @@ The composition factors of Adjoint over F_3 have dimension
     GModule of dimension 5 over GF(3),
     GModule of dimension 5 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -534,18 +591,19 @@ The number of tidy elements in Gamma is
 [ 0, 0 ]
 Representation of Gamma is not induced
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+480
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 768, 384, 135, 135 ]
 Magma might recognize the group Gamma and G to be
 <768, 1086054>
 <384, 18130>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-480
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 480, 481 ]
 [ 154, 155 ]
 The composition factors of Adjoint over F_3 have dimension
@@ -553,7 +611,7 @@ The composition factors of Adjoint over F_3 have dimension
     GModule of dimension 4 over GF(3),
     GModule of dimension 6 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -562,31 +620,35 @@ The number of tidy elements in Gamma is
 24
 # of elements of G not in H of orders 2 and 4
 [ 56, 8 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+481
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 768, 384, 135, 135 ]
 Magma might recognize the group Gamma and G to be
 <768, 1086054>
 <384, 618>
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-481
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 480, 481 ]
 [ 154, 155 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 4 over GF(3),
-    GModule of dimension 6 over GF(3)
+    GModule of dimension 6 over GF(3),
+    GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -595,28 +657,32 @@ The number of tidy elements in Gamma is
 24
 # of elements of G not in H of orders 2 and 4
 [ 72, 24 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+489
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 2304, 1152, 45, 45 ]
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-489
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 489 ]
 [ 160 ]
 The composition factors of Adjoint over F_3 have dimension
 [
-    GModule of dimension 4 over GF(3),
-    GModule of dimension 6 over GF(3)
+    GModule of dimension 6 over GF(3),
+    GModule of dimension 4 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -625,27 +691,31 @@ The number of tidy elements in Gamma is
 72
 # of elements of G not in H of orders 2 and 4
 [ 168, 24 ]
-Representation of Gamma *IS* induced from A index two subgroups, B of which 
-decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, 
-where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)
+Representation of Gamma *IS* induced from A index two subgroups H, B of which 
+decompose over F_3, C of which split (that is, the order two element in the 
+quotient lifts to an order two element in the group), and D of which satisfy H =
+H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we 
+should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts 
+irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is
 [ 1, 1, 1, 0 ]
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+490
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 3840, 1920, 27, 27 ]
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-490
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 490 ]
 [ 161 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule Ad of dimension 10 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -656,22 +726,23 @@ The number of tidy elements in Gamma is
 [ 120, 40 ]
 Representation of Gamma is not induced
 ************************************
+Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
+492
 The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), 
 Index(Sp_4(F_3):G)]
 [ 103680, 51840, 1, 1 ]
-Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is
-492
 Knowing the order of Gamma and the image of the similitude character, the first 
 line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this 
 property. The second line lists the possible subgroups of Sp_4(F_3) up to 
-conjugacy with the same order as G
+conjugacy with the same order as G. Thus, for example, when these lines have 
+only one element, the group is determined up to conjugacy by its order.
 [ 492 ]
 [ 162 ]
 The composition factors of Adjoint over F_3 have dimension
 [
     GModule Ad of dimension 10 over GF(3)
 ]
-and they are aboslutely irreducible if the following # is zero
+and they are absolutely irreducible if the following # is zero
 0
 The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap 
 Z(Sp_4(F_3))]
@@ -684,4 +755,4 @@ Representation of Gamma is not induced
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Total time: 19.679 seconds, Total memory usage: 32.09MB
+Total time: 16.500 seconds, Total memory usage: 32.09MB

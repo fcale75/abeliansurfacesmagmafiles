@@ -1,6 +1,11 @@
-/* An intial remark. If V is a representation of G over F, 
+/* An initial remark. If V is a representation of G over F, 
 then V is absolutely irreducible iff H^0(G,V tensor V^*) = 1. 
 This follows from flat base change. */
+
+print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+print("A general remark about notation: Gamma is a subgroup of GSp_4(F_3), and G is the intersection of Gamma with Sp_4(F_3)");
+print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
 
 /* The Group GSp_4(F_3) */
 
@@ -19,9 +24,9 @@ c:=Center(GSp).1;
 Z<x>:=PolynomialRing(FiniteField(3));
 
 /* The following counts the number of elements in a group Gamma 
-which are tidy. The only allowable possibity is that v(g) = -1. 
+which are tidy. The only allowable possibility is that v(g) = -1. 
 If 1 is an eigenvalue then so is -1, and g is not tidy. If -1
-eigencalue then so is 1, so need only rule out 1 from {1,-1}. Suppose 
+eigenvalue then so is 1, so need only rule out 1 from {1,-1}. Suppose 
 the eigenvalues are of the form (a,-1/a,b,-1/b). Suppose that a ratio = - 1. 
 The ratio of a/(-1/a) = -a^2 can't be -1 unless a=+-1. 
 Hence we must have WLOG b = -a, and eigenvalues = (a,-1/a,-a,1/a), 
@@ -44,7 +49,7 @@ end for;
 return counter;
 end function;
 
-/* the following determines: 1) the labels of subgroups H in GSp_4(F_3) such that |H|=|Gammma| and |nu(H)| = |nu(G)|
+/* the following determines: 1) the labels of subgroups H in GSp_4(F_3) such that |H|=|Gamma| and |nu(H)| = |nu(G)|
 			     2) the labels of subgroups H in Sp_4(F_3) such that |H| = |G| = |Gamma cap Sp_4| */
 
 
@@ -190,7 +195,8 @@ print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 print("Now considering the subgroups of GSp_4(F_3) such that the image of the similitude character is");
 k;
-print("If number above equals 1, there won't be any tidy elements for stupid reasons");
+print("If number above equals 1, there won't be any tidy elements for stupid reasons. The groups printed
+below are the ones such that G = Gamma cap Sp_4(F_3) are enormous.");
 for n in [5..#SubGSp] do 
 
 	Gamma:=SubGSp[n]`subgroup;
@@ -222,9 +228,9 @@ Edited to actually give the correct computation */
 	AbG:=Order(quo<G|CommutatorSubgroup(G)>);
 
 /* Various calculations are done with the "irreducible" constituents of Ad^0. 
-The program actually works with consitutents over F_3, which, a priori, may not 
+The program actually works with constituents over F_3, which, a priori, may not 
 be absolutely irreducible. The following checks whether they are indeed absolutely 
-irreducible; if not, then further checks are requred. In practice, this never 
+irreducible; if not, then further checks are required. In practice, this never 
 happens for the examples in question */
 
 	abscheck:=0;
@@ -256,7 +262,7 @@ It also stops once it has found such an element "counter"  */
                                                         if Discriminant(P) ne 0 then
 
 /* ok, it's found an element g with distinct eigenvalues,
-now restricting the consitutents of Ad^0 to the subgoup H = <g>.
+now restricting the constituents of Ad^0 to the subgroup H = <g>.
 Then computing H^0(H,W) to make sure it is non-zero.
 a good element will have "count" = 0 */
 
@@ -284,6 +290,8 @@ stops after finding one element guaranteeing bigness */
                                 end for;
 				if total eq #CompositionFactors(Ad) then
 					print("************************************");
+					print("Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is");
+					n;
 					print("The numbers: [Order(Gamma),Order(G), Index(GSp_4(F_3):Gamma), Index(Sp_4(F_3):G)]");
                                         [Order(Gamma),Order(G),Index(GSp,Gamma),Index(Sp,G)];
 					if Order(G) le 1000 then
@@ -291,13 +299,11 @@ stops after finding one element guaranteeing bigness */
 						IdentifyGroup(Gamma);
 						IdentifyGroup(G);
 					end if;
-					print("Gamma in GSp_4(F_3), G:=Sp_4 cap Gamma. The label of the subgroup Gamma is");
-					n;
-					print("Knowing the order of Gamma and the image of the similitude character, the first line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this property. The second line lists the possible subgroups of Sp_4(F_3) up to conjugacy with the same order as G");
+					print("Knowing the order of Gamma and the image of the similitude character, the first line lists the possible subgroups of GSp_4(F_3) up to conjugacy with this property. The second line lists the possible subgroups of Sp_4(F_3) up to conjugacy with the same order as G. Thus, for example, when these lines have only one element, the group is determined up to conjugacy by its order.");
 					uptoconj(Gamma);
 					print("The composition factors of Adjoint over F_3 have dimension");
 					CompositionFactors(Ad);
-					print("and they are aboslutely irreducible if the following # is zero");
+					print("and they are absolutely irreducible if the following # is zero");
 					abscheck;
 					print("The numbers: [Order(G/[G,G]), Order(Center(G)), Order(Center(G) cap Z(Sp_4(F_3))]");
 					[AbG,Order(Center(G)),Order(G meet Center(Sp))];	
@@ -310,7 +316,7 @@ stops after finding one element guaranteeing bigness */
 						print("Representation of Gamma is not induced");
 					end if;
 					if count ge 1 then
-						print("Representation of Gamma *IS* induced from A index two subgroups, B of which decompose over F_3, C of which split, and D of which are H = Gamma cap Sp_4, where [A,B,C,D] is (should have D = 0 if k=2, else D=A if k = 1)");
+						print("Representation of Gamma *IS* induced from A index two subgroups H, B of which decompose over F_3, C of which split (that is, the order two element in the quotient lifts to an order two element in the group), and D of which satisfy H = H cap Sp_4. If k=1 so Gamma is contained in Sp_4, then H = H cap Sp_4 and we should have D=A. If Gamma is not contained in Sp_4 then G = Gamma cap Sp_4 acts irreducibly by assumption so when k=2 we should have D=0. Here [A,B,C,D] is");
 						[count, countweak, split, countcyclo];
 					end if;
 				end if;
